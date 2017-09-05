@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -45,29 +50,67 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-Uk-XIc">
+                                <rect key="frame" x="20" y="305" width="335" height="75.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="55"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXX-d2-vEr">
+                                <rect key="frame" x="160" y="385.5" width="55.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="d4i-wc-Op0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-hv-oJY">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pdz-JU-kN3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDk-8f-DGA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OfB-yL-I5W" firstAttribute="leading" secondItem="gdX-I0-86t" secondAttribute="leading" id="2Z6-GF-Kss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PxM-hv-oJY" secondAttribute="bottom" constant="20" id="30b-wf-hrV"/>
                             <constraint firstItem="jJv-a3-ubX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Yu-ze-u81"/>
                             <constraint firstItem="jJv-a3-ubX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7YJ-hQ-BHE"/>
+                            <constraint firstItem="ayz-Uk-XIc" firstAttribute="width" secondItem="OfB-yL-I5W" secondAttribute="width" id="954-1h-ei1"/>
                             <constraint firstItem="gdX-I0-86t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9dU-L1-hLt"/>
                             <constraint firstItem="ScC-0k-YCU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhR-ej-W3i"/>
+                            <constraint firstItem="PxM-hv-oJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D1m-3M-een"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PxM-hv-oJY" secondAttribute="trailing" constant="20" id="EFH-15-3Gm"/>
                             <constraint firstItem="gdX-I0-86t" firstAttribute="top" secondItem="ScC-0k-YCU" secondAttribute="bottom" constant="35" id="G7H-8M-607"/>
                             <constraint firstItem="OfB-yL-I5W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Iai-Yu-P8R"/>
+                            <constraint firstItem="ayz-Uk-XIc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jmk-qh-ihA"/>
                             <constraint firstItem="OfB-yL-I5W" firstAttribute="trailing" secondItem="gdX-I0-86t" secondAttribute="trailing" id="MAg-Be-C94"/>
+                            <constraint firstItem="eXX-d2-vEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ONp-ub-Ts9"/>
                             <constraint firstItem="jJv-a3-ubX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ShL-9A-etb"/>
                             <constraint firstItem="OfB-yL-I5W" firstAttribute="height" secondItem="gdX-I0-86t" secondAttribute="height" id="WOu-SD-m96"/>
+                            <constraint firstItem="ayz-Uk-XIc" firstAttribute="top" secondItem="OfB-yL-I5W" secondAttribute="bottom" constant="45" id="Yir-Pm-3Tg"/>
                             <constraint firstItem="ScC-0k-YCU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Zao-k5-tWh"/>
                             <constraint firstItem="jJv-a3-ubX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ayd-am-m4l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gdX-I0-86t" secondAttribute="trailing" constant="20" id="iXy-u1-mrF"/>
+                            <constraint firstItem="eXX-d2-vEr" firstAttribute="top" secondItem="ayz-Uk-XIc" secondAttribute="bottom" constant="5" id="nAa-WP-qZI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfB-yL-I5W" secondAttribute="trailing" constant="20" id="xmZ-dE-M5o"/>
                             <constraint firstItem="OfB-yL-I5W" firstAttribute="top" secondItem="gdX-I0-86t" secondAttribute="bottom" constant="30" id="zjv-YV-NbH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="eXX-d2-vEr" id="nBZ-3V-V2w"/>
                         <outlet property="priceTxt" destination="OfB-yL-I5W" id="0PX-zk-vWu"/>
+                        <outlet property="resultLbl" destination="ayz-Uk-XIc" id="eMH-BI-DKz"/>
                         <outlet property="wageTxt" destination="gdX-I0-86t" id="sHZ-PZ-Boh"/>
                     </connections>
                 </viewController>
